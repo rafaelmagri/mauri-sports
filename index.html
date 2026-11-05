@@ -1,0 +1,801 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="mauri-static" content="1"><meta name="robots" content="noindex,nofollow"><meta property="og:title" content="Mauri Sports"><meta property="og:description" content="A primeira escola de natação de Porto Alegre. Desde 1973."><link rel="icon" href="fotos/logo.png"><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style><title>Mauri Sports</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Mauri Sports: a primeira escola de natação de Porto Alegre. Natação a partir de 6 meses, hidroginástica, hidrobike, hidropower e judô infantil no Menino Deus.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=DM+Sans:opsz,wght@9..40,400..700&display=swap">
+<style>
+/* Layout: site de academia em páginas (Início, A Mauri, Esportes, Equipe, Contato).
+   Branco como base, marinho e turquesa do logo; títulos em Archivo larga e pesada, ecoando o "SPORTS" do logo. */
+:root{
+  --white:#ffffff;
+  --paper:#f5f7f9;
+  --navy:#11102f;
+  --navy-2:#1b1a45;
+  --teal:#0097a2;
+  --teal-d:#007b85;
+  --teal-l:#e6f5f6;
+  --red:#a33c42;
+  --ink:#11102f;
+  --muted:#5d5c74;
+  --line:#e3e6ec;
+  --ok:#14805a; --err:#c0392b;
+  --f-head:"Archivo", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --f-body:"DM Sans", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --gut-l:max(24px, env(safe-area-inset-left, 0px));
+  --gut-r:max(24px, env(safe-area-inset-right, 0px));
+  --maxw:1240px;
+  color-scheme:light;
+}
+@media (max-width:600px){:root{--gut-l:max(18px, env(safe-area-inset-left, 0px));--gut-r:max(18px, env(safe-area-inset-right, 0px))}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--white);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--white)}
+[hidden]{display:none!important}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+h1,h2,h3{font-family:var(--f-head);margin:0;text-wrap:balance;color:inherit}
+p{margin:0}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+.display{font-weight:800;font-stretch:112%;text-transform:uppercase;letter-spacing:-.01em;line-height:.95}
+.eyebrow{display:inline-block;font-family:var(--f-head);font-stretch:125%;font-weight:600;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal)}
+.sec{padding-block:clamp(72px,9vw,120px)}
+.sec.paper{background:var(--paper)}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 40px;margin-bottom:48px}
+.sec-head .t{max-width:720px;display:grid;gap:14px}
+.sec-head h2{font-size:clamp(2rem,1.3rem + 2.6vw,3.3rem)}
+.sec-head p{color:var(--muted);font-size:1.08rem;max-width:58ch}
+.lead{font-size:1.15rem;color:var(--muted)}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 .95rem/1 var(--f-body);letter-spacing:.01em;border-radius:999px;padding:16px 26px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-1px)}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--teal-d)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-2)}
+.btn-line{border-color:rgba(255,255,255,.55);color:#fff;background:transparent}
+.btn-line:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:#fff}
+.btn-ghost:hover{border-color:var(--ink)}
+.arrow{display:inline-block;width:18px;height:1.5px;background:currentColor;position:relative}
+.arrow::after{content:"";position:absolute;right:0;top:-4px;width:8px;height:8px;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor;transform:rotate(45deg)}
+.link{display:inline-flex;align-items:center;gap:12px;font-weight:600;text-decoration:none;color:var(--ink);border-bottom:1.5px solid currentColor;padding-bottom:4px}
+.link:hover{color:var(--teal)}
+
+/* ---------- cabeçalho ---------- */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:36px;height:82px;position:relative}
+.logo img{height:46px;width:auto}
+.nav{display:flex;gap:30px;list-style:none;margin:0 0 0 auto;padding:0}
+.nav a{display:block;position:relative;text-decoration:none;font-weight:600;font-size:.95rem;color:var(--ink);padding:8px 0}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:2px;height:2px;background:var(--teal);transition:right .25s}
+.nav a:hover::after,.nav a[aria-current="page"]::after{right:0}
+.nav a[aria-current="page"]{color:var(--teal-d)}
+.hdr .tel{font-weight:600;font-size:.92rem;color:var(--muted);text-decoration:none;white-space:nowrap}
+.hdr .btn{padding:13px 22px}
+.burger{display:none;margin-left:auto;background:none;border:0;width:44px;height:44px;cursor:pointer;position:relative}
+.burger span,.burger span::before,.burger span::after{position:absolute;left:11px;width:22px;height:2px;background:var(--ink);content:"";transition:transform .2s}
+.burger span{top:21px}.burger span::before{left:0;top:-7px}.burger span::after{left:0;top:7px}
+@media (max-width:1080px){.hdr .tel{display:none}}
+@media (max-width:860px){
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid var(--line);padding:8px var(--gut-r) 18px var(--gut-l);box-shadow:0 20px 30px -20px rgba(17,16,47,.3)}
+  .nav.open{display:flex}
+  .nav a{padding:14px 0;font-size:1.05rem;border-bottom:1px solid var(--line)}
+  .nav a::after{display:none}
+  .burger{display:block}
+  .hdr .btn{display:none}
+  .hdr .wrap{height:70px}
+  .logo img{height:40px}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden}
+.hero .photo{position:absolute;inset:0 0 0 46%}
+.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.hero .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy) 0%,rgba(17,16,47,.55) 28%,rgba(17,16,47,0) 60%)}
+.hero .wrap{position:relative;z-index:1;min-height:clamp(560px,78vh,720px);display:flex;flex-direction:column;justify-content:center;padding-block:72px}
+.hero .copy{max-width:640px;display:grid;gap:26px}
+.hero .eyebrow{color:#7fd6dc}
+.hero h1{font-size:clamp(2.9rem,1.6rem + 4.6vw,5.6rem)}
+.hero h1 em{font-style:normal;color:#38c3cc}
+.hero .lead{color:#c9c8de;max-width:50ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+@media (max-width:860px){
+  .hero .photo{inset:0}
+  .hero .photo::after{background:linear-gradient(180deg,rgba(17,16,47,.55),rgba(17,16,47,.92) 65%)}
+}
+
+/* faixa de números */
+.stats{background:var(--teal);color:#fff}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.stat{padding:30px 28px;display:grid;gap:4px;border-left:1px solid rgba(255,255,255,.22)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{font-family:var(--f-head);font-weight:800;font-stretch:112%;font-size:clamp(1.6rem,1.2rem + 1.2vw,2.3rem);line-height:1;text-transform:uppercase}
+.stat span{font-size:.92rem;color:#d8f2f4}
+@media (max-width:860px){.stats .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:nth-child(3){border-left:0;padding-left:0}.stat:nth-child(n+3){border-top:1px solid rgba(255,255,255,.22)}}
+
+/* modalidades (cards com foto) */
+.mods{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+@media (max-width:1000px){.mods{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.mods{grid-template-columns:1fr}}
+.mod{position:relative;display:block;aspect-ratio:3/4;border-radius:6px;overflow:hidden;text-decoration:none;color:#fff;background:var(--navy);isolation:isolate}
+.mod img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%;transition:transform .6s cubic-bezier(.2,.7,.2,1);z-index:-2}
+.mod::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(17,16,47,0) 40%,rgba(17,16,47,.88))}
+.mod:hover img{transform:scale(1.05)}
+.mod .in{position:absolute;left:22px;right:22px;bottom:22px;display:grid;gap:6px}
+.mod small{font-family:var(--f-head);font-stretch:125%;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:#8fe1e6}
+.mod h3{font-weight:800;font-stretch:112%;text-transform:uppercase;font-size:1.45rem;line-height:1}
+.mod.type{background:linear-gradient(160deg,var(--teal),#006f78)}
+.mod.type::after{background:none}
+
+/* blocos divididos (texto + foto) */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,6vw,96px);align-items:center}
+.split.rev .media{order:2}
+@media (max-width:860px){.split{grid-template-columns:1fr}.split.rev .media{order:0}}
+.split .txt{display:grid;gap:20px}
+.split h2{font-size:clamp(2rem,1.3rem + 2.4vw,3.2rem)}
+.split p{color:var(--muted);font-size:1.06rem}
+.media{position:relative}
+.media img{width:100%;border-radius:6px;object-fit:cover}
+.media .tall{aspect-ratio:4/5}
+.media .wide{aspect-ratio:4/3}
+.media .tag{position:absolute;left:-1px;bottom:28px;background:var(--navy);color:#fff;padding:14px 20px;font-size:.88rem;line-height:1.35;border-radius:0 4px 4px 0;max-width:80%}
+.media .tag b{display:block;font-family:var(--f-head);font-stretch:112%;text-transform:uppercase;font-size:1rem}
+.sepia{filter:sepia(.25) contrast(1.02)}
+
+/* homenagem */
+.memoriam{background:var(--navy);color:#fff}
+.memoriam .split p{color:#c9c8de}
+.memoriam .dates{font-family:var(--f-head);font-stretch:125%;font-weight:600;letter-spacing:.2em;color:#7fd6dc;font-size:.85rem}
+.memoriam blockquote{margin:0;border-left:2px solid var(--red);padding:4px 0 4px 22px;font-size:1.25rem;line-height:1.5;color:#fff;font-style:italic}
+.memoriam blockquote small{display:block;margin-top:10px;font-style:normal;font-size:.85rem;color:#a6a5c2}
+.memoriam .eyebrow{color:#7fd6dc}
+
+/* faixa CTA */
+.cta-band{background:var(--teal);color:#fff}
+.cta-band .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px;padding-block:64px}
+.cta-band h2{font-size:clamp(1.9rem,1.3rem + 2vw,2.9rem);max-width:18ch}
+
+/* unidade */
+.unit{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+@media (max-width:860px){.unit{grid-template-columns:1fr}}
+.unit .ph img{width:100%;height:100%;object-fit:cover;min-height:340px}
+.unit .info{padding:clamp(28px,4vw,48px);display:grid;gap:26px;align-content:center}
+.unit h3{font-weight:800;font-stretch:112%;text-transform:uppercase;font-size:1.8rem;line-height:1}
+dl.rows{margin:0;display:grid;gap:18px}
+dl.rows div.r{display:grid;grid-template-columns:110px 1fr;gap:16px;border-top:1px solid var(--line);padding-top:16px}
+dl.rows dt{font-family:var(--f-head);font-stretch:125%;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding-top:4px}
+dl.rows dd{margin:0;font-weight:500}
+.hours{display:grid;grid-template-columns:auto auto;gap:2px 18px;justify-content:start;font-variant-numeric:tabular-nums}
+.hours span:nth-child(odd){color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:9px 16px;font:600 .85rem var(--f-body);text-decoration:none;cursor:pointer}
+.chip:hover{border-color:var(--ink)}
+.chip.done{border-color:var(--ok);color:var(--ok)}
+
+/* ---------- páginas internas ---------- */
+.page-hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.page-hero .wrap{padding-block:clamp(64px,8vw,104px);position:relative;z-index:1;display:grid;gap:18px;justify-items:start}
+.page-hero h1{font-size:clamp(2.6rem,1.6rem + 3.6vw,4.8rem);max-width:16ch}
+.page-hero p{color:#c9c8de;font-size:1.12rem;max-width:58ch}
+.page-hero .eyebrow{color:#7fd6dc}
+.page-hero .bg{position:absolute;inset:0 0 0 55%;opacity:.5}
+.page-hero .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.page-hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy),rgba(17,16,47,.15))}
+@media (max-width:860px){.page-hero .bg{inset:0;opacity:.25}}
+.crumbs{font-size:.85rem;color:#a6a5c2}
+.crumbs a{color:#fff;text-decoration:none}
+
+/* história */
+.story{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(36px,6vw,96px);align-items:start}
+@media (max-width:860px){.story{grid-template-columns:1fr}}
+.story .media{position:sticky;top:110px;display:grid;gap:18px}
+@media (max-width:860px){.story .media{position:static}}
+.story .media figure{margin:0}
+.story .media figcaption{font-size:.82rem;color:var(--muted);margin-top:8px}
+.story .body{display:grid;gap:22px}
+.story .body p{font-size:1.08rem;color:#2e2d48}
+.story .body h2{font-size:clamp(1.8rem,1.3rem + 1.6vw,2.6rem);margin-top:14px}
+.pull{font-family:var(--f-head);font-weight:700;font-stretch:105%;font-size:clamp(1.4rem,1.1rem + 1vw,1.9rem);line-height:1.25;color:var(--navy);border-left:3px solid var(--teal);padding-left:24px}
+.pull small{display:block;font-family:var(--f-body);font-weight:500;font-size:.88rem;color:var(--muted);margin-top:10px}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:2px solid var(--navy)}
+@media (max-width:1000px){.tl{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.tl{grid-template-columns:1fr 1fr}}
+.tl li{padding:22px 18px 6px 0;display:grid;gap:8px;align-content:start;position:relative}
+.tl li::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--teal);border:2px solid var(--paper)}
+.tl b{font-family:var(--f-head);font-weight:800;font-stretch:112%;font-size:1.6rem;line-height:1;color:var(--navy)}
+.tl span{font-size:.92rem;color:var(--muted);line-height:1.45}
+
+/* esportes */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.filters button{font:600 .9rem var(--f-body);border:1.5px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:999px;padding:10px 20px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:#fff;color:var(--navy);border-color:#fff}
+.sport{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,72px);align-items:center;padding-block:44px;border-top:1px solid var(--line)}
+.sport:first-child{border-top:0;padding-top:0}
+.sport:nth-child(even) .media{order:2}
+@media (max-width:860px){.sport{grid-template-columns:1fr}.sport:nth-child(even) .media{order:0}}
+.sport .media img,.sport .media .tile{aspect-ratio:4/3;width:100%;border-radius:6px;object-fit:cover;object-position:50% 35%}
+.tile{display:grid;place-items:center;background:linear-gradient(160deg,var(--teal),#006f78);color:#fff;font-family:var(--f-head);font-weight:800;font-stretch:125%;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(1.6rem,1.1rem + 1.6vw,2.4rem);text-align:center;padding:20px}
+.sport .txt{display:grid;gap:16px;justify-items:start}
+.sport .num{font-family:var(--f-head);font-stretch:125%;font-size:.72rem;letter-spacing:.2em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.sport h2{font-weight:800;font-stretch:112%;text-transform:uppercase;font-size:clamp(1.8rem,1.3rem + 1.6vw,2.6rem);line-height:1}
+.sport p{color:var(--muted);font-size:1.06rem;max-width:48ch}
+.who{display:flex;flex-wrap:wrap;gap:8px}
+.who span{font-size:.82rem;font-weight:600;background:var(--teal-l);color:var(--teal-d);padding:6px 12px;border-radius:999px}
+
+/* equipe */
+.team-photo{margin:0}
+.team-photo img{width:100%;aspect-ratio:21/9;object-fit:cover;object-position:50% 30%;border-radius:6px}
+@media (max-width:700px){.team-photo img{aspect-ratio:4/3}}
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:56px;border-top:1px solid var(--line)}
+@media (max-width:860px){.pillars{grid-template-columns:1fr}}
+.pillars div{padding:28px 32px 0 0;display:grid;gap:10px;align-content:start}
+.pillars b{font-family:var(--f-head);font-weight:800;font-stretch:112%;text-transform:uppercase;font-size:1.25rem}
+.pillars p{color:var(--muted)}
+.team{margin-top:56px}
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:230px;gap:12px}
+.gallery img{width:100%;height:100%;object-fit:cover;object-position:50% 35%;border-radius:4px}
+.gallery img:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gallery img:nth-child(6){grid-column:span 2}
+@media (max-width:760px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:160px}.gallery img:nth-child(6){grid-column:span 1}}
+
+/* contato */
+.contact{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,80px);align-items:start}
+@media (max-width:900px){.contact{grid-template-columns:1fr}}
+.channels{display:grid;border-top:1px solid var(--line)}
+.ch{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.ch .k{font-family:var(--f-head);font-stretch:125%;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
+.ch b{font-family:var(--f-head);font-weight:700;font-stretch:105%;font-size:1.35rem}
+.map{position:relative;border-radius:6px;overflow:hidden;min-height:420px;background:var(--paper);margin-top:64px}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map-card{position:absolute;inset:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+@media (max-width:760px){.map{min-height:620px}.map-card{grid-template-columns:1fr}}
+.map-card img{width:100%;height:100%;object-fit:cover}
+.map-card .in{background:var(--navy);color:#fff;padding:clamp(28px,4vw,48px);display:grid;gap:16px;align-content:center;justify-items:start}
+.map-card .in p{color:#c9c8de}
+.map-card .in h3{font-weight:800;font-stretch:112%;text-transform:uppercase;font-size:1.8rem;line-height:1}
+.map-card .in .eyebrow{color:#7fd6dc}
+.map-card .chip{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.map-card .chip:hover{border-color:#fff}
+form{background:#fff;border:1px solid var(--line);border-radius:6px;padding:clamp(24px,3.4vw,40px);display:grid;gap:18px;box-shadow:0 30px 60px -40px rgba(17,16,47,.35)}
+form h3{font-weight:800;font-stretch:112%;text-transform:uppercase;font-size:1.7rem;line-height:1}
+form .sub{color:var(--muted);margin-top:-8px}
+.fg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:560px){.fg{grid-template-columns:1fr}}
+.f{display:grid;gap:6px;min-width:0}
+.f label{font-size:.85rem;font-weight:600}
+.f input,.f select,.f textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:13px 14px;transition:border-color .2s,background .2s}
+.f textarea{min-height:110px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--teal);background:#fff}
+.f [aria-invalid="true"]{border-color:var(--err)}
+.err{color:var(--err);font-size:.82rem}
+.hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:.88rem;color:var(--muted)}
+.consent input{margin-top:4px;accent-color:var(--teal);width:18px;height:18px;flex:none}
+.submit{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.status{font-size:.95rem;font-weight:600}
+.status.ok{color:var(--ok)}.status.bad{color:var(--err)}
+
+/* painel */
+.leads{margin-top:24px;overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+.leads table{width:100%;border-collapse:collapse;min-width:780px;font-size:.92rem}
+.leads th,.leads td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.leads th{font-family:var(--f-head);font-stretch:125%;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:var(--paper);font-weight:600}
+.leads td.when{white-space:nowrap;color:var(--muted);font-variant-numeric:tabular-nums}
+.leads .empty{padding:20px;color:var(--muted)}
+.del{background:none;border:1px solid var(--line);color:var(--muted);border-radius:4px;padding:5px 10px;font:600 .78rem var(--f-body);cursor:pointer}
+.del.arm{border-color:var(--err);color:var(--err)}
+.muted{color:var(--muted)}
+
+/* rodapé */
+footer{background:var(--navy);color:#bdbcd4;font-size:.94rem}
+footer .top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px;padding-block:72px 48px}
+@media (max-width:900px){footer .top{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){footer .top{grid-template-columns:1fr}}
+footer .flogo{height:56px;width:auto;margin-bottom:18px}
+footer h4{font-family:var(--f-head);font-stretch:125%;font-weight:600;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#fff;margin:0 0 16px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{color:#bdbcd4;text-decoration:none}
+footer a:hover{color:#fff}
+footer .base{border-top:1px solid rgba(255,255,255,.1);padding-block:22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:.82rem;color:#8d8caa}
+.wa{position:fixed;right:calc(22px + env(safe-area-inset-right,0px));bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:55;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px -10px rgba(0,0,0,.45);transition:transform .2s}
+.wa:hover{transform:scale(1.06)}
+.wa svg{width:30px;height:30px}
+
+@media (prefers-reduced-motion:no-preference){
+  .view{animation:in .45s cubic-bezier(.2,.7,.2,1)}
+  @keyframes in{from{opacity:.001;transform:translateY(10px)}to{opacity:1;transform:none}}
+}
+</style>
+
+</head><body><header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Mauri Sports, página inicial"><img src="fotos/logo.png" alt="Mauri Sports" width="90" height="46"></a>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu"><span></span></button>
+    <ul class="nav" id="nav">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#a-mauri">A Mauri</a></li>
+      <li><a href="#esportes">Esportes</a></li>
+      <li><a href="#equipe">Equipe</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a class="tel" href="tel:+555132332312">(51) 3233-2312</a>
+    <a class="btn btn-teal" href="#contato">Agende sua aula</a>
+  </div>
+</header>
+
+<main>
+<!-- ======================= INÍCIO ======================= -->
+<div class="view" id="v-inicio" data-view="inicio">
+  <section class="hero" aria-labelledby="h1">
+    <div class="photo"><img src="fotos/mae-filho.jpg" alt="Professora e bebê sorrindo durante a aula de natação na Mauri Sports"></div>
+    <div class="wrap">
+      <div class="copy">
+        <span class="eyebrow">Escola de natação e esportes · Desde 1973</span>
+        <h1 id="h1" class="display">A primeira escola de natação de <em>Porto Alegre</em></h1>
+        <p class="lead">Fundada pelo nadador olímpico Mauri Fonseca e comandada hoje pela filha, Jandora Fonseca. Natação a partir dos 6 meses, hidroginástica, hidrobike, hidropower e judô infantil no Menino Deus.</p>
+        <div class="ctas">
+          <a class="btn btn-teal" href="#contato">Agende sua aula <span class="arrow"></span></a>
+          <a class="btn btn-line" href="#esportes">Conheça os esportes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="A Mauri em números">
+    <div class="wrap">
+      <div class="stat"><b>1973</b><span>Ano de fundação</span></div>
+      <div class="stat"><b>Tóquio 64</b><span>Fundador olímpico</span></div>
+      <div class="stat"><b>6 meses</b><span>Idade para começar a nadar</span></div>
+      <div class="stat"><b id="nMods">8</b><span>Modalidades</span></div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-mods">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="t"><span class="eyebrow">Modalidades</span><h2 id="h-mods" class="display">Escolha o seu esporte</h2></div>
+        <a class="link" href="#esportes">Ver todos os esportes <span class="arrow"></span></a>
+      </div>
+      <div class="mods" id="homeMods"></div>
+    </div>
+  </section>
+
+  <section class="sec paper" aria-labelledby="h-hist-t">
+    <div class="wrap split">
+      <div class="media"><img class="tall sepia" src="fotos/mauri-nadador.jpg" alt="Mauri Fonseca jovem, nos tempos de nadador"><div class="tag"><b>Mauri Fonseca</b>Nadador olímpico, Tóquio 1964</div></div>
+      <div class="txt">
+        <span class="eyebrow">Nossa história</span>
+        <h2 id="h-hist-t" class="display">Mais de 50 anos ensinando Porto Alegre a nadar</h2>
+        <p>Em 1973, Mauri Fonseca, o primeiro gaúcho a nadar uma Olimpíada, abriu a Mauritânia: a primeira escola de natação de Porto Alegre. Foi técnico do Grêmio Náutico União, da seleção gaúcha e da seleção brasileira, e passou a vida ensinando gente a nadar.</p>
+        <p>Hoje a escola se chama Mauri Sports e segue em família, com a filha dele, Jandora Fonseca, no comando.</p>
+        <div><a class="btn btn-navy" href="#a-mauri">Conheça a história <span class="arrow"></span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-eq-t">
+    <div class="wrap split rev">
+      <div class="media"><img class="wide" src="fotos/equipe.jpg" alt="Equipe de professores da Mauri Sports à beira da piscina"></div>
+      <div class="txt">
+        <span class="eyebrow">Equipe</span>
+        <h2 id="h-eq-t" class="display">Professores formados, do jeito Mauri de ensinar</h2>
+        <p>Todos os nossos professores são formados e capacitados. Turmas separadas por idade e nível, do bebê no colo ao adulto que quer treinar firme.</p>
+        <div><a class="btn btn-navy" href="#equipe">Conheça a equipe <span class="arrow"></span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec paper" aria-labelledby="h-unit">
+    <div class="wrap">
+      <div class="sec-head"><div class="t"><span class="eyebrow">Nossa unidade</span><h2 id="h-unit" class="display">Menino Deus, Porto Alegre</h2></div></div>
+      <div class="unit">
+        <div class="ph"><img src="fotos/fachada.jpg" alt="Fachada da Mauri Sports na Rua Dr. Oscar Bittencourt"></div>
+        <div class="info">
+          <h3>Mauri Sports</h3>
+          <dl class="rows">
+            <div class="r"><dt>Endereço</dt><dd>Rua Dr. Oscar Bittencourt, 307<br>Menino Deus · CEP 90850-150</dd></div>
+            <div class="r"><dt>Horários</dt><dd><div class="hours"><span>Seg, qua e sex</span><span>6h15 às 20h45</span><span>Ter e qui</span><span>7h às 20h30</span><span>Sábado</span><span>9h às 12h15</span><span>Domingo</span><span>Fechado</span></div></dd></div>
+            <div class="r"><dt>Contato</dt><dd>(51) 3233-2312 · WhatsApp</dd></div>
+          </dl>
+          <div class="actions"><a class="btn btn-teal" href="#contato">Como chegar</a><a class="btn btn-ghost" data-wa href="https://wa.me/555132332312" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" aria-label="Agende sua aula">
+    <div class="wrap">
+      <h2 class="display">Vem pra água. A primeira aula a gente agenda com você.</h2>
+      <a class="btn btn-navy" href="#contato">Agende sua aula <span class="arrow"></span></a>
+    </div>
+  </section>
+</div>
+
+<!-- ======================= A MAURI ======================= -->
+<div class="view" id="v-a-mauri" data-view="a-mauri" hidden>
+  <section class="page-hero" aria-labelledby="h-am">
+    <div class="bg"><img class="sepia" src="fotos/mauri-nadador.jpg" alt=""></div>
+    <div class="wrap">
+      <div class="crumbs"><a href="#inicio">Início</a> / A Mauri</div>
+      <span class="eyebrow">Nossa história</span>
+      <h1 id="h-am" class="display">De nadador olímpico a escola de família</h1>
+      <p>Como um menino que “não tinha biotipo” virou o primeiro gaúcho numa Olimpíada e abriu a primeira escola de natação de Porto Alegre.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap story">
+      <div class="media">
+        <figure><img class="wide" src="fotos/mauri-terno.jpg" alt="Mauri Fonseca de terno, sorrindo"><figcaption>Mauri Fernandes Fonseca (1941–2026)</figcaption></figure>
+        <figure><img class="wide" src="fotos/jandora-mauri.jpg" alt="Jandora Fonseca abraçada ao pai, Mauri"><figcaption>Jandora e o pai, Mauri</figcaption></figure>
+      </div>
+      <div class="body">
+        <span class="eyebrow">O começo</span>
+        <p>Mauri Fernandes Fonseca nasceu em Rio Grande, em 12 de setembro de 1941, e chegou a Porto Alegre aos 10 anos. Ainda menino, ouviu de um técnico de natação que não tinha o biotipo certo e que deveria procurar outro esporte. Quem não aceitou foi a mãe, Irene Fonseca: ela passou a incentivá-lo e a cronometrar os treinos do filho com um cronômetro velho.</p>
+        <p>Em 1952, o técnico Lélio Soares Araújo o convidou para a equipe do Grêmio Náutico União. Com Mauri na piscina, o União voltou a ser campeão gaúcho de natação, título que não conquistava desde 1945.</p>
+        <h2 class="display">O atleta</h2>
+        <p>Especialista em nado livre e borboleta, foi campeão brasileiro e sul-americano e o primeiro vencedor do Troféu Brasil nos 100 m borboleta. Em 1964 bateu o recorde brasileiro da prova e, no Sul-Americano de Guayaquil, no Equador, foi vice nos 100 m borboleta e no revezamento 4×100 m medley.</p>
+        <p>No mesmo ano veio Tóquio. Mauri se tornou o primeiro nadador gaúcho a disputar uma Olimpíada, nos 100 m livre e no revezamento 4×100 m medley. Ele contava que, nos primeiros 50 metros dos 100 m livre, passou à frente de Don Schollander, a grande estrela daqueles Jogos. A preparação foi raiz: um mês antes da viagem, treinou no Forte da Urca, no Rio, dormindo no quartel com os soldados, no mesmo lugar onde treinava a seleção brasileira de futebol.</p>
+        <div class="pull">“A prova de 100m nado livre está na história, está nas fotos.”<small>Mauri Fonseca, sobre Tóquio 1964</small></div>
+        <h2 class="display">O professor</h2>
+        <p>Depois das piscinas, virou técnico do União, da seleção gaúcha e da seleção brasileira, e treinou Sérgio Pinto Ribeiro, que nadou as Olimpíadas de Montreal 1976 e Moscou 1980. Em 1973 abriu a Mauritânia, a primeira escola de natação de Porto Alegre. Em 1984, segundo o nadador master Francismar Siviero, a primeira competição master da cidade foi realizada ali.</p>
+        <p>Em outubro de 2023, o Grêmio Náutico União homenageou seus nadadores olímpicos e paralímpicos com placas, e Mauri estava entre eles. “Além de ter sido atleta, nadador em 64 em Tóquio, depois foi técnico de muitos de nós”, disse o presidente do clube, Paulo Bing.</p>
+        <h2 class="display">Hoje</h2>
+        <p>A Mauritânia virou Mauri Sports e continua sendo um negócio de família. Quem comanda a escola é Jandora Fonseca, filha do Mauri, com natação do bebê ao adulto, hidroginástica, hidrobike, hidropower e judô infantil.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec paper" aria-label="Linha do tempo">
+    <div class="wrap">
+      <div class="sec-head"><div class="t"><span class="eyebrow">Linha do tempo</span><h2 class="display">Marcos de uma vida na água</h2></div></div>
+      <ol class="tl">
+        <li><b>1952</b><span>Entra na equipe do Grêmio Náutico União</span></li>
+        <li><b>1964</b><span>Recorde brasileiro nos 100 m borboleta</span></li>
+        <li><b>1964</b><span>Olimpíada de Tóquio, primeiro nadador gaúcho nos Jogos</span></li>
+        <li><b>1973</b><span>Abre a Mauritânia, primeira escola de natação de Porto Alegre</span></li>
+        <li><b>2023</b><span>Homenageado pelo Grêmio Náutico União</span></li>
+        <li><b>2026</b><span>Mauri nos deixa aos 84 anos. A escola segue com Jandora</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec memoriam" id="homenagem" aria-labelledby="h-mem">
+    <div class="wrap split">
+      <div class="media"><img class="tall sepia" src="fotos/mauri-nadador.jpg" alt="Retrato antigo de Mauri Fonseca"></div>
+      <div class="txt">
+        <span class="eyebrow">In memoriam</span>
+        <h2 id="h-mem" class="display">Mauri Fernandes Fonseca</h2>
+        <span class="dates">12.09.1941 — 09.01.2026</span>
+        <p>Mauri nos deixou em 9 de janeiro de 2026, aos 84 anos, em Porto Alegre. Foi o primeiro gaúcho a nadar uma Olimpíada, técnico de seleção e o homem que abriu a primeira escola de natação da cidade.</p>
+        <p>Cada bebê que entra na água pela primeira vez, cada criança que perde o medo e cada aluno que volta para mais uma aula continuam a história que ele começou em 1973.</p>
+        <blockquote>“Tudo que eu fiz foi com um amor tão grande, que eu até me sinto constrangido de receber tanta homenagem.”<small>Mauri Fonseca, em 2023</small></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ======================= ESPORTES ======================= -->
+<div class="view" id="v-esportes" data-view="esportes" hidden>
+  <section class="page-hero" aria-labelledby="h-esp">
+    <div class="bg"><img src="fotos/alunos.jpg" alt=""></div>
+    <div class="wrap">
+      <div class="crumbs"><a href="#inicio">Início</a> / Esportes</div>
+      <span class="eyebrow">Modalidades</span>
+      <h1 id="h-esp" class="display">Todos os esportes</h1>
+      <p>Natação a partir dos 6 meses, exercícios na água para todas as idades e judô para a criançada.</p>
+      <div class="filters" id="filters" role="group" aria-label="Filtrar por público"></div>
+    </div>
+  </section>
+  <section class="sec"><div class="wrap"><div id="sportsList"></div></div></section>
+</div>
+
+<!-- ======================= EQUIPE ======================= -->
+<div class="view" id="v-equipe" data-view="equipe" hidden>
+  <section class="page-hero" aria-labelledby="h-eq">
+    <div class="bg"><img src="fotos/equipe.jpg" alt=""></div>
+    <div class="wrap">
+      <div class="crumbs"><a href="#inicio">Início</a> / Equipe</div>
+      <span class="eyebrow">Equipe</span>
+      <h1 id="h-eq" class="display">Quem cuida de você na água</h1>
+      <p>Uma escola fundada por um técnico de seleção, com professores formados e capacitados.</p>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <figure class="team-photo"><img src="fotos/equipe.jpg" alt="Equipe da Mauri Sports com camisetas da escola, à beira da piscina"></figure>
+      <div class="pillars">
+        <div><b>Tradição</b><p>Mais de 50 anos ensinando Porto Alegre a nadar, desde a primeira escola de natação da cidade.</p></div>
+        <div><b>Formação</b><p>Todos os professores são formados e capacitados para dar aula na água e no tatame.</p></div>
+        <div><b>Cuidado</b><p>Turmas por idade e nível, do primeiro contato com a água ao treino.</p></div>
+      </div>
+      <div class="team" id="team" hidden></div>
+    </div>
+  </section>
+  <section class="sec paper" aria-labelledby="h-gal">
+    <div class="wrap">
+      <div class="sec-head"><div class="t"><span class="eyebrow">Galeria</span><h2 id="h-gal" class="display">O dia a dia na Mauri</h2></div></div>
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ======================= CONTATO ======================= -->
+<div class="view" id="v-contato" data-view="contato" hidden>
+  <section class="page-hero" aria-labelledby="h-ct">
+    <div class="bg"><img src="fotos/piscina.jpg" alt=""></div>
+    <div class="wrap">
+      <div class="crumbs"><a href="#inicio">Início</a> / Contato</div>
+      <span class="eyebrow">Contato</span>
+      <h1 id="h-ct" class="display">Agende sua aula</h1>
+      <p>Chame no WhatsApp, ligue ou deixe seus dados. A equipe da Mauri retorna para combinar turma e horário.</p>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <div class="contact">
+        <div class="channels" id="channels">
+          <div class="ch"><div><span class="k">WhatsApp e telefone</span><b>(51) 3233-2312</b></div><div class="actions"><a class="chip" data-wa href="https://wa.me/555132332312" target="_blank" rel="noopener noreferrer">WhatsApp</a><a class="chip" href="tel:+555132332312">Ligar</a></div></div>
+          <div class="ch"><div><span class="k">Telefone</span><b>(51) 3231-9512</b></div><div class="actions"><a class="chip" href="tel:+555132319512">Ligar</a></div></div>
+          <div class="ch"><div><span class="k">Instagram</span><b>@maurinatacao</b></div><div class="actions"><a class="chip" href="https://instagram.com/maurinatacao" target="_blank" rel="noopener noreferrer">Abrir</a></div></div>
+          <div class="ch"><div><span class="k">Endereço</span><b>Rua Dr. Oscar Bittencourt, 307</b><div class="muted">Menino Deus · Porto Alegre · CEP 90850-150</div></div><div class="actions"><button class="chip" type="button" data-copy="Rua Dr. Oscar Bittencourt, 307 - Menino Deus, Porto Alegre - RS, 90850-150">Copiar</button></div></div>
+          <div class="ch"><div><span class="k">Horários</span><div class="hours"><span>Seg, qua e sex</span><span>6h15 às 20h45</span><span>Ter e qui</span><span>7h às 20h30</span><span>Sábado</span><span>9h às 12h15</span><span>Domingo</span><span>Fechado</span></div></div></div>
+        </div>
+
+        <form id="leadForm" novalidate aria-labelledby="form-t">
+          <h3 id="form-t">Quero agendar</h3>
+          <p class="sub">Preencha em menos de um minuto.</p>
+          <div class="fg">
+            <div class="f"><label for="f-nome">Seu nome</label><input id="f-nome" name="nome" autocomplete="name" maxlength="80" required><span class="err" id="e-nome"></span></div>
+            <div class="f"><label for="f-tel">Telefone ou WhatsApp</label><input id="f-tel" name="telefone" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" placeholder="(51) 9 0000-0000" required><span class="err" id="e-tel"></span></div>
+          </div>
+          <div class="f"><label for="f-email">E-mail (opcional)</label><input id="f-email" name="email" type="email" autocomplete="email" maxlength="120"><span class="err" id="e-email"></span></div>
+          <div class="fg">
+            <div class="f"><label for="f-mod">Modalidade</label><select id="f-mod" name="modalidade" required><option value="">Escolha</option></select><span class="err" id="e-mod"></span></div>
+            <div class="f"><label for="f-quem">A aula é para</label><select id="f-quem" name="paraQuem"><option>Para mim</option><option>Para meu filho ou filha</option><option>Para um bebê</option><option>Para outra pessoa</option></select></div>
+          </div>
+          <div class="f"><label for="f-periodo">Melhor período</label><select id="f-periodo" name="periodo"><option>Qualquer horário</option><option>Manhã</option><option>Tarde</option><option>Noite</option></select></div>
+          <div class="f"><label for="f-msg">Mensagem (opcional)</label><textarea id="f-msg" name="mensagem" maxlength="1000" placeholder="Ex.: meu filho tem 6 anos e nunca fez aula."></textarea></div>
+          <div class="hp" aria-hidden="true"><label for="f-empresa">Empresa</label><input id="f-empresa" name="empresa" tabindex="-1" autocomplete="off"></div>
+          <label class="consent" for="f-lgpd"><input id="f-lgpd" type="checkbox" required><span>Autorizo a Mauri Sports a usar estes dados só para responder este contato, conforme a LGPD.</span></label>
+          <span class="err" id="e-lgpd"></span>
+          <div class="submit"><button class="btn btn-teal" type="submit" id="sendBtn">Enviar</button><span class="status" id="status" role="status" aria-live="polite"></span></div>
+        </form>
+      </div>
+
+      <div class="map" id="map">
+        <div class="map-card" id="mapCard">
+          <img src="fotos/fachada.jpg" alt="Fachada da Mauri Sports">
+          <div class="in">
+            <span class="eyebrow">Como chegar</span>
+            <h3>Rua Dr. Oscar Bittencourt, 307</h3>
+            <p>Menino Deus, Porto Alegre. Abra a rota no seu aplicativo de mapas preferido.</p>
+            <div class="actions">
+              <a class="chip" href="https://www.google.com/maps/search/?api=1&query=Mauri%20Nata%C3%A7%C3%A3o%2C%20Rua%20Doutor%20Oscar%20Bittencourt%20307%2C%20Porto%20Alegre" target="_blank" rel="noopener noreferrer">Google Maps</a>
+              <a class="chip" href="https://www.waze.com/live-map/directions/br/rs/mauri-natacao?to=place.ChIJm63AYfN4GZURDUTQD0Ao1wg" target="_blank" rel="noopener noreferrer">Waze</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec paper" id="painel" hidden aria-labelledby="h-painel">
+    <div class="wrap">
+      <span class="eyebrow">Área restrita</span>
+      <h2 id="h-painel" class="display">Contatos recebidos</h2>
+      <p id="painelInfo" class="muted">Só quem é dono desta página vê esta seção.</p>
+      <div class="leads"><table><thead><tr><th>Recebido</th><th>Nome</th><th>Telefone</th><th>Modalidade</th><th>Para</th><th>Período</th><th>Mensagem</th><th></th></tr></thead><tbody id="leadRows"><tr><td colspan="8" class="empty">Carregando…</td></tr></tbody></table></div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div><img class="flogo" src="fotos/logo-branco.png" alt="Mauri Sports" width="110" height="56"><p>A primeira escola de natação de Porto Alegre. Fundada em 1973 por Mauri Fonseca (1941–2026), nadador olímpico em Tóquio 1964.</p></div>
+      <div><h4>Navegue</h4><ul><li><a href="#inicio">Início</a></li><li><a href="#a-mauri">A Mauri</a></li><li><a href="#esportes">Esportes</a></li><li><a href="#equipe">Equipe</a></li><li><a href="#contato">Contato</a></li></ul></div>
+      <div><h4>Unidade</h4><p>Rua Dr. Oscar Bittencourt, 307<br>Menino Deus · Porto Alegre · RS<br>CEP 90850-150</p></div>
+      <div><h4>Fale com a gente</h4><ul><li><a data-wa href="https://wa.me/555132332312" target="_blank" rel="noopener noreferrer">WhatsApp (51) 3233-2312</a></li><li>(51) 3231-9512</li><li><a href="https://instagram.com/maurinatacao" target="_blank" rel="noopener noreferrer">Instagram @maurinatacao</a></li><li><a href="https://www.facebook.com/maurinatacao/" target="_blank" rel="noopener noreferrer">Facebook /maurinatacao</a></li></ul></div>
+    </div>
+    <div class="base"><span>© <span id="yr">2026</span> Mauri Escola de Natação e Esportes Ltda · CNPJ 48.770.156/0001-88</span><span>Em memória de Mauri Fonseca</span></div>
+  </div>
+</footer>
+<a class="wa" id="waFloat" data-wa href="https://wa.me/555132332312" target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 000-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.1 5.1 0 001.1 2.7 11.7 11.7 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.1-1.3c0-.1-.2-.2-.5-.3z"/></svg></a>
+
+<script>
+/* =====================================================================
+   CONTEÚDO EDITÁVEL
+   ===================================================================== */
+const MAURI = {
+  whatsapp: "555132332312",
+  esportes: [
+    { nome: "Natação para bebês", desc: "O primeiro contato com a água, com o bebê no colo de quem ele mais confia. Aulas a partir dos 6 meses.", publico: ["Bebês"], faixa: "A partir de 6 meses", foto: "fotos/bebe.jpg", destaque: true },
+    { nome: "Natação infantil", desc: "As crianças aprendem a nadar, ganham confiança e se divertem na água.", publico: ["Crianças"], faixa: "Crianças", foto: "fotos/menina.jpg", destaque: true },
+    { nome: "Natação adulto", desc: "Para quem quer aprender, voltar a nadar ou melhorar a técnica.", publico: ["Adultos"], faixa: "Adultos", foto: "fotos/alunos.jpg", destaque: true },
+    { nome: "Natação funcional", desc: "Natação com foco em condicionamento físico, força e resistência.", publico: ["Adultos"], faixa: "Adultos", foto: "fotos/piscina.jpg" },
+    { nome: "Hidroginástica", desc: "Exercício na água, com baixo impacto nas articulações e muito bem-estar.", publico: ["Adultos"], faixa: "Adultos", foto: "" },
+    { nome: "Hidrobike", desc: "Exercícios aeróbicos pedalando uma bicicleta submersa.", publico: ["Adultos"], faixa: "Adultos", foto: "" },
+    { nome: "Hidropower", desc: "Treino na água com mais intensidade, para quem quer suar de verdade.", publico: ["Adultos"], faixa: "Adultos", foto: "" },
+    { nome: "Judô infantil", desc: "Disciplina, respeito e muita energia no tatame. Aulas de judô para crianças.", publico: ["Crianças"], faixa: "Crianças", foto: "fotos/judo.jpg", destaque: true },
+  ],
+  professores: [], // { nome, funcao, formacao, foto }
+  galeria: [
+    { src: "fotos/aula-bebes-turma.jpg", alt: "Turma de natação para bebês com os pais na piscina" },
+    { src: "fotos/menina.jpg", alt: "Menina sorrindo na borda da piscina" },
+    { src: "fotos/bebe.jpg", alt: "Bebê na aula de natação" },
+    { src: "fotos/judo.jpg", alt: "Turma de judô infantil com o professor" },
+    { src: "fotos/alunos.jpg", alt: "Alunos abraçados na piscina" },
+    { src: "fotos/piscina.jpg", alt: "Piscina da Mauri Sports com raias" },
+  ],
+};
+
+(() => {
+  "use strict";
+  const $ = (s, r = document) => r.querySelector(s);
+  const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+  const img = (src, alt, cls) => { const i = new Image(); i.src = src; i.alt = alt || ""; i.decoding = "async"; if (cls) i.className = cls; return i; };
+
+  $("#yr").textContent = new Date().getFullYear();
+  $("#nMods").textContent = MAURI.esportes.length;
+  const waHref = "https://wa.me/" + MAURI.whatsapp + "?text=" + encodeURIComponent("Olá! Vim pelo site da Mauri Sports e quero saber das aulas.");
+  document.querySelectorAll("[data-wa]").forEach(a => a.href = waHref);
+
+  /* cards da página inicial */
+  const homeMods = $("#homeMods");
+  MAURI.esportes.filter(s => s.destaque).slice(0, 4).forEach(s => {
+    const a = el("a", "mod"); a.href = "#esportes";
+    if (s.foto) a.append(img(s.foto, s.nome)); else a.classList.add("type");
+    const inn = el("div", "in"); inn.append(el("small", "", s.faixa), el("h3", "", s.nome)); a.append(inn); homeMods.append(a);
+  });
+
+  /* opções do formulário */
+  const sel = $("#f-mod");
+  [...MAURI.esportes.map(s => s.nome), "Outro esporte", "Ainda não sei"].forEach(n => sel.append(new Option(n, n)));
+
+  /* página de esportes */
+  const list = $("#sportsList"), filters = $("#filters");
+  const publicos = ["Todos", ...new Set(MAURI.esportes.flatMap(s => s.publico))];
+  let filtro = "Todos";
+  function renderSports() {
+    list.replaceChildren();
+    MAURI.esportes.filter(s => filtro === "Todos" || s.publico.includes(filtro)).forEach((s, i) => {
+      const art = el("article", "sport");
+      const m = el("div", "media"); m.append(s.foto ? img(s.foto, s.nome) : el("div", "tile", s.nome));
+      const t = el("div", "txt");
+      const who = el("div", "who"); s.publico.forEach(p => who.append(el("span", "", p)));
+      const go = el("a", "btn btn-navy", "Agendar esta aula"); go.href = "#contato"; go.dataset.pick = s.nome;
+      t.append(el("span", "num", String(i + 1).padStart(2, "0") + " · " + s.faixa), el("h2", "", s.nome), el("p", "", s.desc), who, go);
+      art.append(m, t); list.append(art);
+    });
+  }
+  publicos.forEach(p => { const b = el("button", "", p); b.type = "button"; b.setAttribute("aria-pressed", String(p === filtro)); b.onclick = () => { filtro = p; filters.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b))); renderSports(); }; filters.append(b); });
+  renderSports();
+
+  /* professores (opcional) e galeria */
+  if (MAURI.professores.length) {
+    const team = $("#team"); team.hidden = false; team.className = "team mods";
+    MAURI.professores.forEach(p => { const a = el("div", "mod"); if (p.foto) a.append(img(p.foto, p.nome)); const inn = el("div", "in"); inn.append(el("small", "", p.funcao || ""), el("h3", "", p.nome), el("span", "", p.formacao || "")); a.append(inn); team.append(a); });
+  }
+  const gal = $("#gallery"); MAURI.galeria.forEach(g => gal.append(img(g.src, g.alt)));
+
+  /* mapa interativo quando servido pelo servidor próprio */
+  const apiMeta = document.querySelector('meta[name="mauri-api"]');
+  const isStatic = !!document.querySelector('meta[name="mauri-static"]');
+  if (apiMeta || isStatic) {
+    const f = document.createElement("iframe");
+    f.title = "Mapa: Mauri Sports, Rua Dr. Oscar Bittencourt, 307, Menino Deus, Porto Alegre";
+    f.loading = "lazy"; f.referrerPolicy = "no-referrer-when-downgrade";
+    f.src = "https://www.google.com/maps?q=Mauri+Nata%C3%A7%C3%A3o,+Rua+Doutor+Oscar+Bittencourt,+307,+Porto+Alegre&z=16&output=embed";
+    $("#map").append(f); $("#mapCard").hidden = true;
+  }
+
+  /* páginas */
+  const views = [...document.querySelectorAll("[data-view]")];
+  const navLinks = [...document.querySelectorAll(".nav a")];
+  const titles = { inicio: "Mauri Sports", "a-mauri": "A Mauri · Mauri Sports", esportes: "Esportes · Mauri Sports", equipe: "Equipe · Mauri Sports", contato: "Contato · Mauri Sports" };
+  function route() {
+    let name = (location.hash || "#inicio").slice(1), anchor = null;
+    if (name === "homenagem") { anchor = name; name = "a-mauri"; }
+    if (!views.some(v => v.dataset.view === name)) name = "inicio";
+    views.forEach(v => { const on = v.dataset.view === name; if (on && v.hidden) { v.hidden = false; v.style.animation = "none"; void v.offsetHeight; v.style.animation = ""; } else if (!on) v.hidden = true; });
+    navLinks.forEach(a => { if (a.hash === "#" + name) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+    document.title = titles[name];
+    if (anchor) requestAnimationFrame(() => document.getElementById(anchor)?.scrollIntoView()); else scrollTo(0, 0);
+  }
+  addEventListener("hashchange", route); route();
+  document.addEventListener("click", e => { const a = e.target.closest("a[data-pick]"); if (a) setTimeout(() => { sel.value = a.dataset.pick; }, 0); });
+
+  /* menu celular */
+  const burger = $("#burger"), nav = $("#nav");
+  burger.onclick = () => { const o = nav.classList.toggle("open"); burger.setAttribute("aria-expanded", String(o)); };
+  nav.addEventListener("click", e => { if (e.target.closest("a")) { nav.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); } });
+
+  /* copiar */
+  document.addEventListener("click", async ev => {
+    const b = ev.target.closest("[data-copy]"); if (!b) return;
+    const label = b.textContent;
+    try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = "Copiado"; b.classList.add("done"); } catch { b.textContent = b.dataset.copy; }
+    setTimeout(() => { b.textContent = label; b.classList.remove("done"); }, 2200);
+  });
+
+  /* ---------- formulário ---------- */
+  const form = $("#leadForm"), statusEl = $("#status"), btn = $("#sendBtn");
+  const startedAt = Date.now();
+  const clean = s => String(s || "").replace(/[\u0000-\u001F\u007F​-‏‪-‮]/g, " ").replace(/\s+/g, " ").trim();
+  const setErr = (id, field, msg) => { $("#" + id).textContent = msg || ""; if (field) field.setAttribute("aria-invalid", msg ? "true" : "false"); };
+  function validate() {
+    const d = { nome: clean($("#f-nome").value).slice(0, 80), telefone: clean($("#f-tel").value).slice(0, 20), email: clean($("#f-email").value).slice(0, 120), modalidade: sel.value, paraQuem: $("#f-quem").value, periodo: $("#f-periodo").value, mensagem: String($("#f-msg").value || "").replace(/[\u0000-\u0008\u000B-\u001F\u007F]/g, "").trim().slice(0, 1000), empresa: $("#f-empresa").value };
+    let ok = true;
+    if (!/^[\p{L}][\p{L}' .-]{1,79}$/u.test(d.nome)) { setErr("e-nome", $("#f-nome"), "Escreva seu nome (só letras)."); ok = false; } else setErr("e-nome", $("#f-nome"));
+    const digits = d.telefone.replace(/\D/g, "");
+    if (digits.length < 10 || digits.length > 13) { setErr("e-tel", $("#f-tel"), "Informe o telefone com DDD, ex.: (51) 99999-8888."); ok = false; } else setErr("e-tel", $("#f-tel"));
+    if (d.email && !/^[^\s@]{1,64}@[^\s@]{1,255}\.[a-z]{2,}$/i.test(d.email)) { setErr("e-email", $("#f-email"), "Esse e-mail parece incompleto."); ok = false; } else setErr("e-email", $("#f-email"));
+    if (!d.modalidade) { setErr("e-mod", sel, "Escolha uma modalidade."); ok = false; } else setErr("e-mod", sel);
+    if (!$("#f-lgpd").checked) { setErr("e-lgpd", null, "Marque a autorização para podermos responder."); ok = false; } else setErr("e-lgpd", null);
+    d.telefone = digits; return ok ? d : null;
+  }
+  async function viaServer(d) {
+    const r = await fetch("/api/lead", { method: "POST", credentials: "same-origin", headers: { "Content-Type": "application/json", "X-Form-Token": apiMeta.content }, body: JSON.stringify(d) });
+    if (r.status === 429) throw new Error("Muitas tentativas seguidas. Espere alguns minutos e tente de novo.");
+    if (!r.ok) { let m = ""; try { m = (await r.json()).erro; } catch {} throw new Error(m || "Não foi possível enviar agora. Chame no WhatsApp (51) 3233-2312."); }
+  }
+  let dbP = null, userP = null;
+  const getDb = () => (dbP ??= (window.claude?.use ? window.claude.use("db") : Promise.resolve(null)));
+  const getUser = () => (userP ??= (window.claude?.use ? window.claude.use("user") : Promise.resolve(null)));
+  async function viaDb(d) {
+    const [db, user] = await Promise.all([getDb(), getUser()]);
+    const uid = user ? await user.id() : null;
+    if (!db || !uid) throw new Error("Nesta visualização o envio online não está disponível. Chame no WhatsApp (51) 3233-2312.");
+    const { empresa, ...rest } = d;
+    try { await db.collection("leads").doc(uid).set({ ...rest, criadoEm: new Date().toISOString(), origem: "site" }); }
+    catch (e) { throw new Error(e?.code === "invalid_argument" ? "Seu acesso a esta página não permite enviar. Chame no WhatsApp (51) 3233-2312." : "Não foi possível enviar agora. Tente de novo em instantes."); }
+  }
+  form.addEventListener("submit", async ev => {
+    ev.preventDefault(); statusEl.className = "status"; statusEl.textContent = "";
+    const d = validate(); if (!d) { statusEl.className = "status bad"; statusEl.textContent = "Confira os campos marcados."; return; }
+    if (d.empresa || Date.now() - startedAt < 2500) { statusEl.className = "status ok"; statusEl.textContent = "Recebido! A gente entra em contato."; form.reset(); return; }
+    btn.disabled = true; btn.textContent = "Enviando…";
+    try {
+      if (isStatic) {
+        const txt = `Olá! Quero agendar uma aula.\nNome: ${d.nome}\nTelefone: ${d.telefone}${d.email ? "\nE-mail: " + d.email : ""}\nModalidade: ${d.modalidade}\nPara: ${d.paraQuem}\nPeríodo: ${d.periodo}${d.mensagem ? "\nMensagem: " + d.mensagem : ""}`;
+        window.open("https://wa.me/" + MAURI.whatsapp + "?text=" + encodeURIComponent(txt), "_blank", "noopener");
+        statusEl.className = "status ok"; statusEl.textContent = "Abrimos o WhatsApp da Mauri com a sua mensagem pronta. É só tocar em enviar."; form.reset(); return;
+      }
+      if (apiMeta) await viaServer(d); else await viaDb(d); statusEl.className = "status ok"; statusEl.textContent = "Recebido! A equipe da Mauri Sports vai entrar em contato pelo telefone informado."; form.reset(); }
+    catch (e) { statusEl.className = "status bad"; statusEl.textContent = e.message; }
+    finally { btn.disabled = false; btn.textContent = "Enviar"; }
+  });
+
+  /* ---------- painel do dono (no link de prévia) ---------- */
+  (async () => {
+    if (apiMeta || !window.claude?.use) return;
+    const user = await getUser(); if (!user || !(await user.isOwner())) return;
+    const db = await getDb(); if (!db) return;
+    $("#painel").hidden = false;
+    const tbody = $("#leadRows"), info = $("#painelInfo");
+    const timer = setTimeout(() => { info.textContent = "Não foi possível carregar os contatos agora."; }, 10000);
+    const fmt = iso => { try { return new Date(iso).toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" }); } catch { return ""; } };
+    const fone = s => { const d = String(s || ""); return d.length >= 10 ? `(${d.slice(-11, -9) || d.slice(0, 2)}) ${d.slice(-9, -4)}-${d.slice(-4)}` : d; };
+    db.collection("leads").orderBy("criadoEm", "desc").onSnapshot(snap => {
+      if (!snap.metadata.fromCache) { clearTimeout(timer); info.textContent = `${snap.size} contato${snap.size === 1 ? "" : "s"}. Só quem é dono desta página vê esta seção.`; }
+      tbody.replaceChildren();
+      if (snap.empty) { const tr = el("tr"); const td = el("td", "empty", "Nenhum contato ainda. Quando alguém enviar o formulário, ele aparece aqui."); td.colSpan = 8; tr.append(td); tbody.append(tr); return; }
+      for (const doc of snap.docs) {
+        const v = doc.data() || {}; const tr = el("tr");
+        const cell = (t, cls) => tr.append(el("td", cls, t || "—"));
+        cell(fmt(v.criadoEm), "when"); cell(v.nome); cell(fone(v.telefone) + (v.email ? " · " + v.email : "")); cell(v.modalidade); cell(v.paraQuem); cell(v.periodo); cell(v.mensagem);
+        const td = el("td"); const b = el("button", "del", "Excluir"); b.type = "button";
+        b.onclick = async () => { if (!b.classList.contains("arm")) { b.classList.add("arm"); b.textContent = "Confirmar"; setTimeout(() => { b.classList.remove("arm"); b.textContent = "Excluir"; }, 4000); return; } b.disabled = true; try { await db.collection("leads").doc(doc.id).delete(); } catch { b.disabled = false; b.textContent = "Tente de novo"; } };
+        td.append(b); tr.append(td); tbody.append(tr);
+      }
+    }, () => { clearTimeout(timer); info.textContent = "Os contatos não puderam ser carregados nesta visualização."; });
+  })();
+})();
+</script>
+</body></html>
